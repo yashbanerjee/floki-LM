@@ -304,3 +304,71 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 .send-btn:hover { background: var(--accent2); transform: scale(1.05); }
 .send-btn.stop { background: rgba(248, 113, 113, 0.2); border: 1px solid var(--red); color: var(--red); }
 .send-btn.stop:hover { background: rgba(248, 113, 113, 0.3); }
+
+/* Model sublabel */
+.model-info { display: flex; flex-direction: column; gap: 1px; }
+.model-sub { font-size: 10px; color: var(--text3); }
+
+/* Model indicator dot in topbar */
+.model-indicator { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.model-indicator.qwen25-7b { background: #4ade80; box-shadow: 0 0 6px #4ade80; }
+.model-indicator.gemma4 { background: #60a5fa; box-shadow: 0 0 6px #60a5fa; }
+
+/* Welcome model buttons */
+.welcome-model-btn { 
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 12px 20px; min-width: 140px;
+}
+.welcome-model-btn strong { font-size: 13px; }
+.welcome-model-btn span { font-size: 11px; color: var(--text3); }
+.wm-badge { 
+  font-size: 10px; padding: 1px 6px; border-radius: 10px;
+  background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.3);
+  color: #60a5fa !important;
+}
+
+/* Attach bar */
+.attach-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 4px; border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.attach-btn {
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 6px; color: var(--text2); font-family: inherit;
+  font-size: 12px; padding: 6px 12px; cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; gap: 5px;
+}
+.attach-btn:hover { background: var(--bg4); border-color: var(--accent); color: var(--text); }
+.attach-hint { font-size: 11px; color: var(--text3); margin-left: 4px; }
+
+/* Pending files */
+.pending-files {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 8px 0; margin-bottom: 8px;
+}
+.pending-file {
+  position: relative; display: inline-flex; align-items: center;
+}
+.pending-file img { height: 72px; width: 72px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border2); }
+.file-icon {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 8px; padding: 10px 14px; font-size: 22px;
+}
+.file-icon span { font-size: 11px; color: var(--text2); max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.remove-file {
+  position: absolute; top: -6px; right: -6px;
+  background: var(--bg4); border: 1px solid var(--border2);
+  color: var(--text2); border-radius: 50%; width: 18px; height: 18px;
+  font-size: 9px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.remove-file:hover { background: var(--red); border-color: var(--red); color: #fff; }
+
+/* Media in messages */
+.msg-media { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.msg-file {
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--text2);
+}
